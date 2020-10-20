@@ -1,2 +1,2 @@
 # is425-hdds
-IS 425 - Heart Disease Diagnosis System
+IS 425 - Heart Disease Decision System
