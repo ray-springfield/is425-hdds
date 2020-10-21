@@ -6,17 +6,16 @@ include 'includes/functions.php';
 // check to make sure that the method is POST and that no values are blank
 if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
     $displayError = true;
-}
-else {
+} else {
     $displayError = false;
 
     // process all of the POST values
     $days = getAgeInDays($_POST['DOB']);
-    $height = convertToCentimeters((int)$_POST['feet'], (int)$_POST['inches']);
-    $weight = poundsToKilograms((int)$_POST['weight']);
+    $height = convertToCentimeters((int) $_POST['feet'], (int) $_POST['inches']);
+    $weight = poundsToKilograms((int) $_POST['weight']);
     $gender = genderToCode($_POST['gender']);
-    $systolicBloodPressure = (int)$_POST['systolicBloodPressure'];
-    $diastolicBloodPressure = (int)$_POST['diastolicBloodPressure'];
+    $systolicBloodPressure = (int) $_POST['systolicBloodPressure'];
+    $diastolicBloodPressure = (int) $_POST['diastolicBloodPressure'];
     $cholesterol = normalToValue($_POST['cholesterol']);
     $glucose = normalToValue($_POST['glucose']);
     $smoking = yesNoToBinary($_POST['smoking']);
@@ -40,19 +39,22 @@ else {
 </head>
 
 <body>
-<?php
-    echo "<h5>$days</h5>";
-    echo "<h5>$height</h5>";
-    echo "<h5>$weight</h5>";
-    echo "<h5>$gender</h5>";
-    echo "<h5>$systolicBloodPressure</h5>";
-    echo "<h5>$diastolicBloodPressure</h5>";
-    echo "<h5>$cholesterol</h5>";
-    echo "<h5>$glucose</h5>";
-    echo "<h5>$smoking</h5>";
-    echo "<h5>$alcohol</h5>";
-    echo "<h5>$physical</h5>";
-?>
+    <?php
+    if ($displayError) {
+    ?>
+
+    <!-- Block of HTML -->
+    <h5>Oops! Looks like something went wrong.</h5>
+
+    <?php
+    }
+    else {
+        foreach ($_POST as $value) {
+            echo "<h5>" . $value . "</h5>";
+        }
+    }
+
+    ?>
 </body>
 
 </html>

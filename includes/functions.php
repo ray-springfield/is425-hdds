@@ -15,6 +15,11 @@ function containsBlank($values) {
         }
     }
 
+    // radio button keys don't exist when "blank"
+    if (!array_key_exists('smoking', $values) || !array_key_exists('alcohol', $values) || !array_key_exists('physical', $values)) {
+        return true;
+    }
+
     return false;
 }
 
