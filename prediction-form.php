@@ -17,7 +17,7 @@
             <div class="text-center pb-1 border-bottom">
                 <h2>Enter Patient Information</h2>
             </div>
-            <form class="pt-3">
+            <form class="pt-3" action="submit-prediction-form.php" method="POST">
                 <div class="form-row">
                     <div class="form-group col-3">
                         <label for="DOB">Date of Birth</label>
@@ -26,11 +26,11 @@
                     <div class="form-group col-3">
                         <label for="height">Height</label>
                         <div class="d-flex justify-content-center">
-                            <input type="number" class="form-control" id="height" name="height" min="0">
+                            <input type="number" class="form-control" id="feet" name="feet" min="0">
                             <div class="d-flex align-items-end">
                                 <p class="mb-0 ml-1 mr-2">ft</p>
                             </div>
-                            <input type="number" class="form-control" id="inches" name="inches" min="0">
+                            <input type="number" class="form-control" id="inches" name="inches" min="0" max="11">
                             <div class="d-flex align-items-end">
                                 <p class="mb-0 ml-1 mr-2">in</p>
                             </div>
@@ -47,7 +47,7 @@
                     </div>
                     <div class="form-group col-3">
                         <label for="gender">Gender</label>
-                        <select class="form-control" id="gender">
+                        <select class="form-control" id="gender" name="gender">
                             <option>Male</option>
                             <option>Female</option>
                         </select>
@@ -76,7 +76,7 @@
                     </div>
                     <div class="form-group col-3">
                         <label for="cholesterol">Cholesterol</label>
-                        <select class="form-control" id="cholesterol">
+                        <select class="form-control" id="cholesterol" name="cholesterol">
                             <option>Normal</option>
                             <option>Above Normal</option>
                             <option>Well Above Normal</option>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="form-group col-3">
                         <label for="glucose">Glucose</label>
-                        <select class="form-control" id="glucose">
+                        <select class="form-control" id="glucose" name="glucose">
                             <option>Normal</option>
                             <option>Above Normal</option>
                             <option>Well Above Normal</option>
@@ -96,11 +96,11 @@
                         <label for="smoking">Smoking?</label>
                         <div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="smoking1" name="smoking" class="custom-control-input">
+                                <input type="radio" id="smoking1" name="smoking" class="custom-control-input" value="Yes">
                                 <label class="custom-control-label" for="smoking1">Yes</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="smoking2" name="smoking" class="custom-control-input">
+                                <input type="radio" id="smoking2" name="smoking" class="custom-control-input" value="No">
                                 <label class="custom-control-label" for="smoking2">No</label>
                             </div>
                         </div>
@@ -109,11 +109,11 @@
                         <label for="alcohol">Alcohol Consumption?</label>
                         <div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="alcohol1" name="alcohol" class="custom-control-input">
+                                <input type="radio" id="alcohol1" name="alcohol" class="custom-control-input" value="Yes">
                                 <label class="custom-control-label" for="alcohol1">Yes</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="alcohol2" name="alcohol" class="custom-control-input">
+                                <input type="radio" id="alcohol2" name="alcohol" class="custom-control-input" value="No">
                                 <label class="custom-control-label" for="alcohol2">No</label>
                             </div>
                         </div>
@@ -122,11 +122,11 @@
                         <label for="physical">Physically Active?</label>
                         <div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="physical1" name="physical" class="custom-control-input">
+                                <input type="radio" id="physical1" name="physical" class="custom-control-input" value="Yes">
                                 <label class="custom-control-label" for="physical1">Yes</label>
                             </div>
                             <div class="custom-control custom-radio custom-control-inline">
-                                <input type="radio" id="physical2" name="physical" class="custom-control-input">
+                                <input type="radio" id="physical2" name="physical" class="custom-control-input" value="No">
                                 <label class="custom-control-label" for="physical2">No</label>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
                 <div class="form-row">
                     <div class="d-flex justify-content-end w-100">
                         <button type="button" class="btn btn-outline-danger mr-1">Cancel</button>
-                        <button type="button" class="btn btn-outline-primary ml-1">Submit</button>
+                        <button type="submit" class="btn btn-outline-primary ml-1">Submit</button>
                     </div>
                 </div>
             </form>
