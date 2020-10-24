@@ -9,8 +9,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 } else {
     $displayError = false;
 
+    // load in constants
+    include 'config/config.php';
+
     // process all of the POST values
-    $days = getAgeInDays($_POST['DOB']);
+    $age = getAgeInDays($_POST['DOB']);
     $height = convertToCentimeters((int) $_POST['feet'], (int) $_POST['inches']);
     $weight = poundsToKilograms((int) $_POST['weight']);
     $gender = genderToCode($_POST['gender']);
@@ -21,6 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
     $smoking = yesNoToBinary($_POST['smoking']);
     $alcohol = yesNoToBinary($_POST['alcohol']);
     $physical = yesNoToBinary($_POST['physical']);
+
+    // send a GET request to our model server
+    $url = $MODEL_URL . '?' . 'age=' . $age . '&height=' . $height . '&weight=' . $weight . '&gender=' . $gender . 
+        '&systolicBloodPressure=' . $systolicBloodPressure . '&diastolicBloodPressure=' . $diastolicBloodPressure . 
+        '&cholesterol=' . $cholesterol . '&glucose=' . $glucose . '&smoking=' . $smoking . '&alcohol=' . $alcohol . 
+        '&physical=' . $physical;
+
+    $res = file_get_contents($url);
 }
 
 ?>
@@ -41,19 +52,12 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 <body>
     <?php
     if ($displayError) {
-    ?>
-
-    <!-- Block of HTML -->
-    <h5>Oops! Looks like something went wrong.</h5>
-
-    <?php
+        echo "<h1>Oops! Looks like something went wrong.</h1>";
     }
     else {
-        foreach ($_POST as $value) {
-            echo "<h5>" . $value . "</h5>";
-        }
-    }
+        echo "<h1>Prediction: $res</h1>";
 
+    }
     ?>
 </body>
 
