@@ -175,7 +175,7 @@
                     </div>
                     <div class="form-row">
                         <div class="d-flex justify-content-end w-100">
-                            <button type="button" class="btn btn-outline-danger mr-1">Cancel</button>
+                            <a href="index.php" class="btn btn-outline-danger mr-1">Cancel</a>
                             <button type="submit" class="btn btn-outline-primary ml-1">Submit</button>
                         </div>
                     </div>
