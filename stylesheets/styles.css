@@ -2,3 +2,12 @@
     height: 100vh;
     margin: 0px;
 }
+
+.zoom-on-hover {
+    transition: transform 0.2s;
+}
+
+.zoom-on-hover:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
