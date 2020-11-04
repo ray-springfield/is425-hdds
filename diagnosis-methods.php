@@ -18,7 +18,8 @@
 
 <body>
     <div class="animate__animated animate__fadeIn">
-        <h1 class="text-center pt-5 pb-5">Diagnosis Methods</h1>
+        <h1 class="text-center pt-5 pb-4">Diagnosis Methods</h1>
+        <hr>
         <div class="d-flex justify-content-center">
             <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;"
                 onclick="window.open('https://www.webmd.com/heart-disease/electrocardiogram-ekgs#1')">

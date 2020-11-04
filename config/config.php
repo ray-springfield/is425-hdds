@@ -1,6 +1,6 @@
 <?php
 
 // CONSTANTS
-$MODEL_URL = 'http://c43183ffe9e9.ngrok.io';
+$MODEL_URL = 'https://e9ae9f4171df.ngrok.io';
 
 ?>
