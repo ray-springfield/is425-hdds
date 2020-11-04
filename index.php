@@ -17,7 +17,7 @@
 <body>
     <div class="animate__animated animate__fadeIn">
         <div class="text-center pt-5 pb-4">
-            <h1>Welcome, User!</h1>
+            <h1 class="display-4">Welcome, User!</h1>
         </div>
         <hr>
         <div class="pt-5 d-flex justify-content-around">

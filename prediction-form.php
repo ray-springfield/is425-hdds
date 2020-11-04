@@ -19,7 +19,7 @@
         <div class="animate__animated animate__fadeIn">
             <div class="border p-3 rounded-lg" style="background-color: #FFFFFF;">
                 <div class="text-center pb-1 border-bottom">
-                    <h2>Enter Patient Information</h2>
+                    <h4>Enter Patient Information</h4>
                 </div>
                 <form class="pt-3" id="predictionForm" action="submit-prediction-form.php" method="POST"
                     onsubmit="return validateForm()">
