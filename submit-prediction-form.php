@@ -155,7 +155,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/bmi-image.png" alt="BMI Image" class="zoom-on-hover">
+                <img src="images/bmi-image.png" alt="BMI Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.cdc.gov/healthyweight/assessing/bmi/index.html')">
             </div>
         </div>
         <div class="row mb-5">
@@ -173,7 +174,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/blood-pressure-image.png" alt="Blood Pressure Image" class="zoom-on-hover">
+                <img src="images/blood-pressure-image.png" alt="Blood Pressure Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings')">
             </div>
         </div>
         <div class="row mb-5">
@@ -189,7 +191,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/cholesterol-image.png" alt="Cholesterol Image" class="zoom-on-hover">
+                <img src="images/cholesterol-image.png" alt="Cholesterol Image" class="zoom-on-hover"
+                    onclick="window.open('https://medlineplus.gov/cholesterol.html#:~:text=Cholesterol%20is%20a%20waxy%2C%20fat,all%20the%20cholesterol%20it%20needs.')">
             </div>
         </div>
         <div class="row mb-5">
@@ -205,7 +208,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/glucose-image.png" alt="Glucose Image" class="zoom-on-hover">
+                <img src="images/glucose-image.png" alt="Glucose Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.healthline.com/health/glucose#normal-levels')">
             </div>
         </div>
         <div class="row mb-5">
@@ -219,7 +223,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/smoking-image.png" alt="Smoking Image" class="zoom-on-hover">
+                <img src="images/smoking-image.png" alt="Smoking Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.nhlbi.nih.gov/health-topics/smoking-and-your-heart')">
             </div>
         </div>
         <div class="row mb-5">
@@ -233,7 +238,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/alcohol-image.png" alt="Alcohol Image" class="zoom-on-hover">
+                <img src="images/alcohol-image.png" alt="Alcohol Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.webmd.com/heart-disease/guide/heart-disease-alcohol-your-heart')">
             </div>
         </div>
         <div class="row pb-5">
@@ -247,7 +253,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/exercise-image.png" alt="Exercise Image" class="zoom-on-hover">
+                <img src="images/exercise-image.png" alt="Exercise Image" class="zoom-on-hover"
+                    onclick="window.open('https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048890.59383.8D')">
             </div>
         </div>
     </div>
