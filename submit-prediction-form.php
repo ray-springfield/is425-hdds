@@ -70,52 +70,57 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 
         $BMI_OVERWEIGHT = 25.0;
 
-        echo '<div style="background-color: #FFFFFF;">';
-        echo '<h1 class="display-4 text-center">Predicted Chance of Heart Disease: ' . (float)$res * 100 . '%' . '</h1><hr>';
-        echo '</div>';
+        // calculated BMI
+        $bmi = getBMI($weight, $height);
     ?>
     <div class="container" style="background-color: #FFFFFF;">
+        <div class="row">
+            <div class="col p-3">
+                <h1 class="display-4 text-center">Prediction Results</h1>
+                <hr>
+            </div>
+        </div>
         <div class="row">
             <div class="col">
                 <div class="alert" role="alert">
                     <div class="container-fluid m-0 p-0">
-                        <div class="row shadow-sm p-3 mb-5 bg-white rounded">
+                        <div class="row shadow p-3 mb-5 bg-white rounded">
                             <div class="col-4">
                                 <h2>Overview</h2>
                                 <p>A quick overview of any issues with your client, all located in one place.</p>
                             </div>
                             <div class="col-7 shadow-sm pt-3 mb-5 bg-white rounded">
                                 <?php
-                            if (getBMI($weight, $height) >= $BMI_OVERWEIGHT) {
-                                include 'includes/alerts/overweight-warning.php';
-                            }
-                            // for elevated blood pressure, it's AND; for high, it's OR
-                            if ($systolicBloodPressure > $SYSTOLIC_NORMAL && $systolicBloodPressure <= $SYSTOLIC_ELEVATED &&
-                                $diastolicBloodPressure <= $DIASTOLIC_ELEVATED) {
-                                include 'includes/alerts/blood-pressure-warning.php';
-                            } elseif ($systolicBloodPressure >= $SYSTOLIC_HIGH && $diastolicBloodPressure >= $DIASTOLIC_HIGH) {
-                                include 'includes/alerts/blood-pressure-danger.php';
-                            }
-                            if ($cholesterol == 3) {
-                                include 'includes/alerts/cholesterol-danger.php';
-                            } elseif ($cholesterol == 2) {
-                                include 'includes/alerts/cholesterol-warning.php';
-                            }
-                            if ($glucose == 3) {
-                                include 'includes/alerts/glucose-danger.php';
-                            } elseif ($glucose == 2) {
-                                include 'includes/alerts/glucose-warning.php';
-                            }
-                            if ($smoking == 1) {
-                                include 'includes/alerts/smoking-warning.php';
-                            }
-                            if ($alcohol == 1) {
-                                include 'includes/alerts/alcohol-warning.php';
-                            }
-                            if ($physical == 0) {
-                                include 'includes/alerts/physical-warning.php';
-                            }
-                            ?>
+                                if ($bmi >= $BMI_OVERWEIGHT) {
+                                    include 'includes/alerts/overweight-warning.php';
+                                }
+                                // for elevated blood pressure, it's AND; for high, it's OR
+                                if ($systolicBloodPressure > $SYSTOLIC_NORMAL && $systolicBloodPressure <= $SYSTOLIC_ELEVATED &&
+                                    $diastolicBloodPressure <= $DIASTOLIC_ELEVATED) {
+                                    include 'includes/alerts/blood-pressure-warning.php';
+                                } elseif ($systolicBloodPressure >= $SYSTOLIC_HIGH && $diastolicBloodPressure >= $DIASTOLIC_HIGH) {
+                                    include 'includes/alerts/blood-pressure-danger.php';
+                                }
+                                if ($cholesterol == 3) {
+                                    include 'includes/alerts/cholesterol-danger.php';
+                                } elseif ($cholesterol == 2) {
+                                    include 'includes/alerts/cholesterol-warning.php';
+                                }
+                                if ($glucose == 3) {
+                                    include 'includes/alerts/glucose-danger.php';
+                                } elseif ($glucose == 2) {
+                                    include 'includes/alerts/glucose-warning.php';
+                                }
+                                if ($smoking == 1) {
+                                    include 'includes/alerts/smoking-warning.php';
+                                }
+                                if ($alcohol == 1) {
+                                    include 'includes/alerts/alcohol-warning.php';
+                                }
+                                if ($physical == 0) {
+                                    include 'includes/alerts/physical-warning.php';
+                                }
+                                ?>
                             </div>
                             <div class="col-1">
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -130,12 +135,28 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
                 <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>BMI: Healthy</h2>
+                    <div class="alert alert-info" role="alert">
+                        <h2>Model Prediction</h2>
                     </div>
-                    <p>The patient's BMI falls under 25%, meaning that the patient is still within the acceptable range,
-                        and is not considered overweight</p>
+                    <p>The probability of heart disease in the patient, predicted using our Random Forest model</p>
                 </div>
+            </div>
+            <!-- to match the size of the other 268px icons -->
+            <div class="col-7 d-flex justify-content-center align-items-center" style="height: 268px;">
+                <div class="shadow p-5 mb-5 bg-white rounded">
+                    <?php echo '<h1 class="display-1">' . (float)$res * 100 . '%' . '</h1>'; ?>
+                </div>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-5 d-flex align-items-center">
+                <?php
+                if ($bmi < $BMI_OVERWEIGHT) {
+                    include 'includes/results/bmi-healthy.php';
+                } else {
+                    include 'includes/results/bmi-unhealthy.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/bmi-image.png" alt="BMI Image" class="zoom-on-hover">
@@ -143,13 +164,17 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Blood Pressure: Healthy</h2>
-                    </div>
-                    <p>The patient's systolic blood pressure falls under 120 and diastolic blood pressure falls under
-                        80, indicating healthy blood pressure.</p>
-                </div>
+                <?php
+                // for elevated blood pressure, it's AND; for high, it's OR
+                if ($systolicBloodPressure > $SYSTOLIC_NORMAL && $systolicBloodPressure <= $SYSTOLIC_ELEVATED &&
+                    $diastolicBloodPressure <= $DIASTOLIC_ELEVATED) {
+                    include 'includes/results/blood-pressure-elevated.php';
+                } elseif ($systolicBloodPressure >= $SYSTOLIC_HIGH && $diastolicBloodPressure >= $DIASTOLIC_HIGH) {
+                    include 'includes/results/blood-pressure-high.php';
+                } else {
+                    include 'includes/results/blood-pressure-normal.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/blood-pressure-image.png" alt="Blood Pressure Image" class="zoom-on-hover">
@@ -157,12 +182,15 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Cholesterol: Healthy</h2>
-                    </div>
-                    <p>The patient's cholesterol falls within a healthy range; there is no need to make any changes.</p>
-                </div>
+                <?php
+                if ($cholesterol == 3) {
+                    include 'includes/results/cholesterol-well-above-normal.php';
+                } elseif ($cholesterol == 2) {
+                    include 'includes/results/cholesterol-above-normal.php';
+                } else {
+                    include 'includes/results/cholesterol-normal.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/cholesterol-image.png" alt="Cholesterol Image" class="zoom-on-hover">
@@ -170,12 +198,15 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Glucose: Healthy</h2>
-                    </div>
-                    <p>The patient's glucose falls within a healthy range; there is no need to make any changes.</p>
-                </div>
+                <?php
+                if ($glucose == 3) {
+                    include 'includes/results/glucose-well-above-normal.php';
+                } elseif ($glucose == 2) {
+                    include 'includes/results/glucose-above-normal.php';
+                } else {
+                    include 'includes/results/glucose-normal.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/glucose-image.png" alt="Glucose Image" class="zoom-on-hover">
@@ -183,12 +214,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Smoking Status: No</h2>
-                    </div>
-                    <p>The patient doesn't smoke, lowering the chances of lung-related problems and heart disease.</p>
-                </div>
+                <?php
+                if ($smoking == 1) {
+                    include 'includes/results/smoking-yes.php';
+                } else {
+                    include 'includes/results/smoking-no.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/smoking-image.png" alt="Smoking Image" class="zoom-on-hover">
@@ -196,12 +228,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row mb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Alcohol Status: No</h2>
-                    </div>
-                    <p>The patient doesn't smoke, lowering the chances of liver problems and fatty tissue buildup.</p>
-                </div>
+                <?php
+                if ($alcohol == 1) {
+                    include 'includes/results/alcohol-yes.php';
+                } else {
+                    include 'includes/results/alcohol-no.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/alcohol-image.png" alt="Alcohol Image" class="zoom-on-hover">
@@ -209,12 +242,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
         </div>
         <div class="row pb-5">
             <div class="col-5 d-flex align-items-center">
-                <div>
-                    <div class="alert alert-success" role="alert">
-                        <h2>Exercise Status: Yes</h2>
-                    </div>
-                    <p>The patient exercises, which makes a person more healthy!</p>
-                </div>
+                <?php
+                if ($physical == 0) {
+                    include 'includes/results/exercise-no.php';
+                } else {
+                    include 'includes/results/exercise-yes.php';
+                }
+                ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
                 <img src="images/exercise-image.png" alt="Exercise Image" class="zoom-on-hover">
