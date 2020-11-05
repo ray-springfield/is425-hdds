@@ -42,17 +42,13 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 <head>
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
-
-    <!-- Bootstrap Imports -->
     <?php include 'includes/bootstrap-scripts.php';?>
-
-    <!-- Other Imports -->
+    <?php include 'includes/animate-scripts.php'; ?>
     <link rel="stylesheet" href="stylesheets/styles.css">
-
     <title>Submit Prediction Form</title>
 </head>
 
-<body style="background-color: #483D8B;">
+<body style="background-color: #483D8B;" class="animate__animated animate__fadeIn">
     <?php
     if ($displayError) {
         echo "<h1>Oops! Looks like something went wrong.</h1>";
@@ -143,7 +139,7 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
             </div>
             <!-- to match the size of the other 268px icons -->
             <div class="col-7 d-flex justify-content-center align-items-center" style="height: 268px;">
-                <div class="shadow p-5 mb-5 bg-white rounded">
+                <div class="shadow p-5 mb-5 bg-white rounded zoom-on-hover">
                     <?php echo '<h1 class="display-1">' . (float)$res * 100 . '%' . '</h1>'; ?>
                 </div>
             </div>
