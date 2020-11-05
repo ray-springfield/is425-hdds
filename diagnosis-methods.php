@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
 
     <!-- Import Bootstrap Dependencies -->
     <?php include 'includes/bootstrap-scripts.php';?>

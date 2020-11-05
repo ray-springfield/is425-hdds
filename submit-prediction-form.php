@@ -41,6 +41,8 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="favicon.ico">
+
     <!-- Bootstrap Imports -->
     <?php include 'includes/bootstrap-scripts.php';?>
 
