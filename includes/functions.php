@@ -104,4 +104,17 @@ function normalToValue($value) {
     }
 }
 
+/**
+ * Calculates the BMI of an individual
+ * @param float the kilograms
+ * @param int number of centimeeters
+ * @return float the BMI
+ */
+function getBMI($kilograms, $centimeters) {
+    $CM_TO_M = 0.01;
+
+    // BMI = KG / M**2
+    return $kilograms / (($centimeters * $CM_TO_M) ** 2);
+}
+
 ?>
