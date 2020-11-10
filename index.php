@@ -28,7 +28,7 @@
         <a href="history.php" class="text-center text-reset text-decoration-none zoom-on-hover">
             <img src="images/book-icon.png" alt="Book Icon">
             <br>
-            <h3>Patient History</h3>
+            <h3>Prediction History</h3>
         </a>
         <a href="treatments.php" class="text-center text-reset text-decoration-none zoom-on-hover">
             <img src="images/medicine-icon.png" alt="Medicine Icon">
@@ -40,6 +40,7 @@
             <br>
             <h3>Diagnosis</h3>
         </a>
+    </div>
 </body>
 
 </html>
