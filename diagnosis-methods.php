@@ -47,7 +47,7 @@
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/holter-monitor.png" alt="Holter Monitor">
+                        <img class="card-img-top" src="images/holter-monitor.png" alt="Holter Monitor Image">
                         <div class="card-body">
                             <h5 class="card-title">Holter Monitoring</h5>
                             <p class="card-text">A portable device to be worn for a period of time, in order to detect
@@ -59,7 +59,7 @@
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/echocardiogram.png">
+                        <img class="card-img-top" src="images/echocardiogram.png" alt="Echocardiogram Image">
                         <div class="card-body">
                             <h5 class="card-title">Echocardiogram</h5>
                             <p class="card-text">A noninvasive ultrasound of the chest that shows a detailed view of the
@@ -71,7 +71,7 @@
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/stress-test.jpg">
+                        <img class="card-img-top" src="images/stress-test.jpg" alt="Stress Test Image">
                         <div class="card-body">
                             <h5 class="card-title">Stress Test</h5>
                             <p class="card-text">Heart rate is raised through exercise or medicine, and monitored to see
@@ -84,7 +84,7 @@
                 </div>
                 <div class="d-flex justify-content-center">
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/cardiac-catheterization.png">
+                        <img class="card-img-top" src="images/cardiac-catheterization.png" alt="Cardiac Catheterization">
                         <div class="card-body">
                             <h5 class="card-title">Catheterization</h5>
                             <p class="card-text">A tube is inserted into an artery and guided to the heart, visualizing
@@ -96,7 +96,7 @@
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/ct-scan.jpg">
+                        <img class="card-img-top" src="images/ct-scan.jpg" alt="CT Scan">
                         <div class="card-body">
                             <h5 class="card-title">CT Scan</h5>
                             <p class="card-text">A doughnut-shaped machine uses x-ray devices to collect images of the
@@ -108,7 +108,7 @@
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
-                        <img class="card-img-top" src="images/cardiac-mri.jpg">
+                        <img class="card-img-top" src="images/cardiac-mri.jpg" alt="Cardiac MRI">
                         <div class="card-body">
                             <h5 class="card-title">MRI</h5>
                             <p class="card-text">A long, tube-like machine produces a magnetic field to create pictures

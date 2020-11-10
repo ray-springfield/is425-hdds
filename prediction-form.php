@@ -30,7 +30,7 @@
                             <div class="invalid-feedback">Required field</div>
                         </div>
                         <div class="form-group col-6">
-                            <label for="height">Height</label>
+                            <label>Height</label>
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-6 p-0 pr-1">
@@ -119,7 +119,7 @@
                     </div>
                     <div class="form-row">
                         <div class="form-group col-4">
-                            <label for="smoking">Smoking?</label>
+                            <label>Smoking?</label>
                             <div class="form-control" id="smokingFormControl">
                                 <div class="d-flex">
                                     <div class="custom-control custom-radio custom-control-inline">
@@ -137,7 +137,7 @@
                             <div class="invalid-feedback">Required field</div>
                         </div>
                         <div class="form-group col-4">
-                            <label for="alcohol">Alcohol Consumption?</label>
+                            <label>Alcohol Consumption?</label>
                             <div class="form-control" id="alcoholFormControl">
                                 <div class="d-flex">
                                     <div class="custom-control custom-radio custom-control-inline">
@@ -155,7 +155,7 @@
                             <div class="invalid-feedback">Required field</div>
                         </div>
                         <div class="form-group col-4">
-                            <label for="physical">Physically Active?</label>
+                            <label>Physically Active?</label>
                             <div class="form-control" id="physicalFormControl">
                                 <div class="d-flex">
                                     <div class="custom-control custom-radio custom-control-inline">

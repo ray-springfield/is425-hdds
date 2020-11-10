@@ -280,7 +280,7 @@
                             <p class="card-text">A medicine that works on the parts of the brain involved in addictive
                                 behavior, and helps relieve the addiction to smoking.</p>
                             <a href="https://www.webmd.com/drugs/2/drug-1609/zyban-oral/details" target="_blank"
-                                class="stretched-link"><a>
+                                class="stretched-link"></a>
                         </div>
                     </div>
                     <div class="ml-3 mr-3"></div> <!-- Empty <div> for margin spacing -->
