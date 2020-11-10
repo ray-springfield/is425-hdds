@@ -20,22 +20,22 @@
     </div>
     <hr>
     <div class="pt-5 d-flex justify-content-around">
-        <a href="prediction-form.php" class="btn">
+        <a href="prediction-form.php" class="btn zoom-on-hover">
             <img src="images/question-mark-icon.png" alt="Question Mark Icon">
             <br>
             <h3>Make a Prediction</h3>
         </a>
-        <a href="history.php" class="btn">
+        <a href="history.php" class="btn zoom-on-hover">
             <img src="images/book-icon.png" alt="Book Icon">
             <br>
             <h3>Patient History</h3>
         </a>
-        <a href="treatments.php" class="btn">
+        <a href="treatments.php" class="btn zoom-on-hover">
             <img src="images/medicine-icon.png" alt="Medicine Icon">
             <br>
             <h3>Treatments</h3>
         </a>
-        <a href="diagnosis-methods.php" class="btn">
+        <a href="diagnosis-methods.php" class="btn zoom-on-hover">
             <img src="images/stethoscope.png" alt="Diagnosis Icon">
             <br>
             <h3>Diagnosis</h3>
