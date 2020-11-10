@@ -154,8 +154,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/bmi-image.png" alt="BMI Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.cdc.gov/healthyweight/assessing/bmi/index.html')">
+                <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" target="_blank"
+                    class="zoom-on-hover">
+                    <img src="images/bmi-image.png" alt="BMI Image">
+                </a>
             </div>
         </div>
         <div class="row mb-5">
@@ -173,8 +175,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/blood-pressure-image.png" alt="Blood Pressure Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings')">
+                <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings"
+                    target="_blank" class="zoom-on-hover">
+                    <img src="images/blood-pressure-image.png" alt="Blood Pressure Image">
+                </a>
             </div>
         </div>
         <div class="row mb-5">
@@ -190,8 +194,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/cholesterol-image.png" alt="Cholesterol Image" class="zoom-on-hover"
-                    onclick="window.open('https://medlineplus.gov/cholesterol.html#:~:text=Cholesterol%20is%20a%20waxy%2C%20fat,all%20the%20cholesterol%20it%20needs.')">
+                <a href="https://medlineplus.gov/cholesterol.html#:~:text=Cholesterol%20is%20a%20waxy%2C%20fat,all%20the%20cholesterol%20it%20needs."
+                    target="_blank" class="zoom-on-hover">
+                    <img src="images/cholesterol-image.png" alt="Cholesterol Image">
+                </a>
             </div>
         </div>
         <div class="row mb-5">
@@ -207,8 +213,9 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/glucose-image.png" alt="Glucose Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.healthline.com/health/glucose#normal-levels')">
+                <a href="https://www.healthline.com/health/glucose#normal-levels" target="_blank" class="zoom-on-hover">
+                    <img src="images/glucose-image.png" alt="Glucose Image">
+                </a>
             </div>
         </div>
         <div class="row mb-5">
@@ -222,8 +229,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/smoking-image.png" alt="Smoking Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.nhlbi.nih.gov/health-topics/smoking-and-your-heart')">
+                <a href="https://www.nhlbi.nih.gov/health-topics/smoking-and-your-heart" target="_blank"
+                    class="zoom-on-hover">
+                    <img src="images/smoking-image.png" alt="Smoking Image">
+                </a>
             </div>
         </div>
         <div class="row mb-5">
@@ -237,8 +246,10 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/alcohol-image.png" alt="Alcohol Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.webmd.com/heart-disease/guide/heart-disease-alcohol-your-heart')">
+                <a href="https://www.webmd.com/heart-disease/guide/heart-disease-alcohol-your-heart" target="_blank"
+                    class="zoom-on-hover">
+                    <img src="images/alcohol-image.png" alt="Alcohol Image">
+                </a>
             </div>
         </div>
         <div class="row pb-5">
@@ -252,14 +263,16 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                 ?>
             </div>
             <div class="col-7 d-flex justify-content-center">
-                <img src="images/exercise-image.png" alt="Exercise Image" class="zoom-on-hover"
-                    onclick="window.open('https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048890.59383.8D')">
+                <a href="https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048890.59383.8D" target="_blank"
+                    class="zoom-on-hover">
+                    <img src="images/exercise-image.png" alt="Exercise Image">
+                </a>
             </div>
         </div>
         <div class="row pb-5">
             <div class="col text-center">
                 <hr>
-                <a href="treatments.php" type="button" class="btn btn-outline-primary btn-lg">See Treatment Options</a>
+                <a href="treatments.php" class="btn btn-outline-primary btn-lg">See Treatment Options</a>
             </div>
         </div>
     </div>
