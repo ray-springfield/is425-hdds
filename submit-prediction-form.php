@@ -43,12 +43,11 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
     <meta charset="UTF-8">
     <link rel="icon" href="favicon.ico">
     <?php include 'includes/bootstrap-scripts.php';?>
-    <?php include 'includes/animate-scripts.php'; ?>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <title>Submit Prediction Form</title>
 </head>
 
-<body style="background-color: #483D8B;" class="animate__animated animate__fadeIn">
+<body style="background-color: #483D8B;" class="fade-in">
     <?php
     if ($displayError) {
         echo "<h1>Oops! Looks like something went wrong.</h1>";

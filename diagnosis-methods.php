@@ -7,17 +7,14 @@
 
     <!-- Import Bootstrap Dependencies -->
     <?php include 'includes/bootstrap-scripts.php';?>
-
-    <!-- Animate.css Import -->
-    <?php include 'includes/animate-scripts.php';?>
-
+    
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="stylesheets/styles.css">
 
     <title>Diagnosis Methods</title>
 </head>
 
-<body class="animate__animated animate__fadeIn" style="background-color: #483D8B;">
+<body class="fade-in" style="background-color: #483D8B;">
     <div class="container" style="background-color: #FFFFFF">
         <div class="row">
             <div class="col">

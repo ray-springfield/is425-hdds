@@ -8,9 +8,6 @@
     <!-- Bootstrap Imports -->
     <?php include 'includes/bootstrap-scripts.php';?>
 
-    <!-- Animate.css Import -->
-    <?php include 'includes/animate-scripts.php';?>
-
     <!-- Other Imports -->
     <link rel="stylesheet" href="stylesheets/styles.css">
 
@@ -19,7 +16,7 @@
 
 <body class="max-viewport-height" style="background-color: #483D8B;">
     <div class="d-flex justify-content-center align-items-center h-100">
-        <div class="animate__animated animate__fadeIn">
+        <div class="fade-in">
             <div class="border p-3 rounded-lg" style="background-color: #FFFFFF;">
                 <div class="text-center pb-1 border-bottom">
                     <h4>Enter Patient Information</h4>

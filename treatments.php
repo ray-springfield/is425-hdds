@@ -9,7 +9,7 @@
     <title>Treatments</title>
 </head>
 
-<body style="background-color: #483D8B;">
+<body style="background-color: #483D8B;" class="fade-in">
     <div class="container" style="background-color: #FFFFFF">
         <div class="row">
             <div class="col d-flex justify-content-center">
