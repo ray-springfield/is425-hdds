@@ -256,6 +256,12 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
                     onclick="window.open('https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048890.59383.8D')">
             </div>
         </div>
+        <div class="row pb-5">
+            <div class="col text-center">
+                <hr>
+                <a href="treatments.php" type="button" class="btn btn-outline-primary btn-lg">See Treatment Options</a>
+            </div>
+        </div>
     </div>
     <?php
     } // end of the brace for the main else-block
