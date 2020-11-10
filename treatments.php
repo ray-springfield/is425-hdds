@@ -12,12 +12,16 @@
 <body style="background-color: #483D8B;" class="fade-in">
     <div class="container" style="background-color: #FFFFFF">
         <div class="row">
+            <div class="col-1">
+                <a href="index.php">Home</a>
+            </div>
             <div class="col d-flex justify-content-center">
                 <div>
                     <h1 class="text-center pt-5 display-4">Treatments</h1>
                     <hr>
                 </div>
             </div>
+            <div class="col-1"></div> <!-- Empty column for spacing purposes -->
         </div>
         <div class="row">
             <div class="col">

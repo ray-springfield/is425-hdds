@@ -7,7 +7,7 @@
 
     <!-- Import Bootstrap Dependencies -->
     <?php include 'includes/bootstrap-scripts.php';?>
-    
+
     <!-- Custom Stylesheet -->
     <link rel="stylesheet" href="stylesheets/styles.css">
 
@@ -18,8 +18,22 @@
     <div class="container" style="background-color: #FFFFFF">
         <div class="row">
             <div class="col">
-                <h1 class="text-center pt-5 pb-4 display-4">Diagnosis Methods</h1>
-                <hr>
+                <div class="container-fluid p-0">
+                    <div class="row">
+                        <div class="col-1">
+                            <a href="index.php">Home</a>
+                        </div>
+                        <div class="col">
+                            <h1 class="text-center pt-5 pb-4 display-4">Diagnosis Methods</h1>
+                        </div>
+                        <div class="col-1"></div> <!-- Empty col for alignment purposes -->
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <hr>
+                        </div>
+                    </div>
+                </div>
                 <div class="d-flex justify-content-center">
                     <div class="card shadow p-3 mb-5 bg-white rounded zoom-on-hover" style="width: 18rem;">
                         <img class="card-img-top" src="images/electrocardiogram.png" alt="Electrocardiogram Picture">
