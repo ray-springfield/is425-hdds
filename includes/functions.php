@@ -113,8 +113,12 @@ function normalToValue($value) {
 function getBMI($kilograms, $centimeters) {
     $CM_TO_M = 0.01;
 
+    // weird parse error when on UMBC server, gonna try to break it down instead
+    $meters = $centimeters * $CM_TO_M;
+    $metersSquared = pow($meters, 2); // turns out the PHP on UMBC GL server doesn't support '**' operator...
+
     // BMI = KG / M**2
-    return $kilograms / (($centimeters * $CM_TO_M) ** 2);
+    return $kilograms / $metersSquared;
 }
 
 ?>
