@@ -1,14 +1,17 @@
-CREATE TABLE History (
-    historyId INT NOT NULL AUTO_INCREMENT,
-    ageInDays INT NOT NULL,
-    heightInCentimeters INT NOT NULL,
-    genderInCode INT NOT NULL,
-    systolicBloodPressure INT NOT NULL,
-    diastolicBloodPressure INT NOT NULL,
-    cholesterolLevel INT NOT NULL,
-    glucoseLevel INT NOT NULL,
-    smokingInBinary INT NOT NULL,
-    alcoholInBinary INT NOT NULL,
-    physicalInBinary INT NOT NULL,
-    PRIMARY KEY (historyId)
+/* SHOW CREATE TABLE History -> from phpmyadmin */
+
+CREATE TABLE `history` (
+ `historyId` int(11) NOT NULL AUTO_INCREMENT,
+ `dob` date NOT NULL,
+ `heightInCentimeters` int(11) NOT NULL,
+ `weightFloat` float NOT NULL,
+ `genderInCode` int(11) NOT NULL,
+ `systolicBloodPressure` int(11) NOT NULL,
+ `diastolicBloodPressure` int(11) NOT NULL,
+ `cholesterolLevel` int(11) NOT NULL,
+ `glucoseLevel` int(11) NOT NULL,
+ `smokingInBinary` int(11) NOT NULL,
+ `alcoholInBinary` int(11) NOT NULL,
+ `physicalInBinary` int(11) NOT NULL,
+ PRIMARY KEY (`historyId`)
 );
