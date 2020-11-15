@@ -1,6 +1,6 @@
 /* SHOW CREATE TABLE History -> from phpmyadmin */
 
-CREATE TABLE `history` (
+CREATE TABLE `History` (
  `historyId` int(11) NOT NULL AUTO_INCREMENT,
  `dob` date NOT NULL,
  `heightInCentimeters` int(11) NOT NULL,
