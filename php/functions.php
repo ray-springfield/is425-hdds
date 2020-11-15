@@ -43,9 +43,10 @@ function convertToCentimeters($feet, $inches) {
  */
 function getAgeInDays($date) {
     $origin = date_create($date);
-    $today = date_create();
+    $today = date_create('now');
     $interval = date_diff($origin, $today);
-    return $interval->d;
+
+    return $interval->format('%a');
 }
 
 /**
@@ -65,7 +66,7 @@ function poundsToKilograms($pounds) {
  * @return int
  */
 function genderToCode($gender) {
-    $MALE_CODE = 2;
+    $MALE_CODE = 0;
     $FEMALE_CODE = 1;
 
     return ($gender == "Male") ? $MALE_CODE : $FEMALE_CODE;

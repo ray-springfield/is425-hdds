@@ -1,38 +1,41 @@
 <?php
 
-// import the functions needed to process POST data
-include 'includes/functions.php';
+// CONSTANTS
+$SYSTOLIC_NORMAL = 119;
+$DIASTOLIC_NORMAL = 79;
 
-// check to make sure that the method is POST and that no values are blank
-if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
-    $displayError = true;
-} else {
-    $displayError = false;
+$SYSTOLIC_ELEVATED = 129;
+$DIASTOLIC_ELEVATED = 79;
 
-    // load in url constant
-    include 'config/config.php';
+$SYSTOLIC_HIGH = 130;
+$DIASTOLIC_HIGH = 80;
 
-    // process all of the POST values
-    $age = getAgeInDays($_POST['DOB']);
-    $height = convertToCentimeters((int) $_POST['feet'], (int) $_POST['inches']);
-    $weight = poundsToKilograms((int) $_POST['weight']);
-    $gender = genderToCode($_POST['gender']);
-    $systolicBloodPressure = (int) $_POST['systolicBloodPressure'];
-    $diastolicBloodPressure = (int) $_POST['diastolicBloodPressure'];
-    $cholesterol = normalToValue($_POST['cholesterol']);
-    $glucose = normalToValue($_POST['glucose']);
-    $smoking = yesNoToBinary($_POST['smoking']);
-    $alcohol = yesNoToBinary($_POST['alcohol']);
-    $physical = yesNoToBinary($_POST['physical']);
+$BMI_OVERWEIGHT = 25.0;
 
-    // send a GET request to our model server
-    $url = $MODEL_URL . '?' . 'age=' . $age . '&height=' . $height . '&weight=' . $weight . '&gender=' . $gender . 
-        '&systolicBloodPressure=' . $systolicBloodPressure . '&diastolicBloodPressure=' . $diastolicBloodPressure . 
-        '&cholesterol=' . $cholesterol . '&glucose=' . $glucose . '&smoking=' . $smoking . '&alcohol=' . $alcohol . 
-        '&physical=' . $physical;
+// we need to url constant to reach the Node.js model endpoint
+require_once('config/config.php');
 
-    $res = file_get_contents($url);
-}
+// this page is accessed from 'submit-prediction-form.php', we need to get the GET values
+$age = $_GET['age'];
+$height = $_GET['height'];
+$weight = $_GET['weight'];
+$gender = $_GET['gender'];
+$systolicBloodPressure = $_GET['systolicBloodPressure'];
+$diastolicBloodPressure = $_GET['diastolicBloodPressure'];
+$cholesterol = $_GET['cholesterol'];
+$glucose = $_GET['glucose'];
+$smoking = $_GET['smoking'];
+$alcohol = $_GET['alcohol'];
+$physical = $_GET['physical'];
+$bmi = $_GET['bmi'];
+
+// send a GET request to our model server
+$url = $MODEL_URL . '?' . 'age=' . $age . '&height=' . $height . '&weight=' . $weight . '&gender=' . $gender . 
+    '&systolicBloodPressure=' . $systolicBloodPressure . '&diastolicBloodPressure=' . $diastolicBloodPressure . 
+    '&cholesterol=' . $cholesterol . '&glucose=' . $glucose . '&smoking=' . $smoking . '&alcohol=' . $alcohol . 
+    '&physical=' . $physical;
+
+$res = file_get_contents($url);
 
 ?>
 
@@ -48,26 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
 </head>
 
 <body style="background-color: #483D8B;" class="fade-in">
-    <?php
-    if ($displayError) {
-        echo "<h1>Oops! Looks like something went wrong.</h1>";
-    }
-    else {
-        // CONSTANTS
-        $SYSTOLIC_NORMAL = 119;
-        $DIASTOLIC_NORMAL = 79;
-
-        $SYSTOLIC_ELEVATED = 129;
-        $DIASTOLIC_ELEVATED = 79;
-
-        $SYSTOLIC_HIGH = 130;
-        $DIASTOLIC_HIGH = 80;
-
-        $BMI_OVERWEIGHT = 25.0;
-
-        // calculated BMI
-        $bmi = getBMI($weight, $height);
-    ?>
     <div class="container" style="background-color: #FFFFFF;">
         <div class="row">
             <div class="col p-3">
@@ -276,9 +259,6 @@ if ($_SERVER['REQUEST_METHOD'] != 'POST' || containsBlank($_POST) == true) {
             </div>
         </div>
     </div>
-    <?php
-    } // end of the brace for the main else-block
-    ?>
 </body>
 
 </html>

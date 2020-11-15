@@ -5,7 +5,7 @@ CREATE TABLE History (
     genderInCode INT NOT NULL,
     systolicBloodPressure INT NOT NULL,
     diastolicBloodPressure INT NOT NULL,
-    cholesteralLevel INT NOT NULL,
+    cholesterolLevel INT NOT NULL,
     glucoseLevel INT NOT NULL,
     smokingInBinary INT NOT NULL,
     alcoholInBinary INT NOT NULL,

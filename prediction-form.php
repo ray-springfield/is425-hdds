@@ -21,7 +21,7 @@
                 <div class="text-center pb-1 border-bottom">
                     <h4>Enter Patient Information</h4>
                 </div>
-                <form class="pt-3" id="predictionForm" action="submit-prediction-form.php" method="POST"
+                <form class="pt-3" id="predictionForm" action="php/submit-prediction-form.php" method="POST"
                     onsubmit="return validateForm()">
                     <div class="form-row">
                         <div class="form-group col-6">
