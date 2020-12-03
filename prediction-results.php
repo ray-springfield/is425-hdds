@@ -292,10 +292,18 @@ $res = file_get_contents($url);
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col">
+                                Accuracy:
+                            </div>
+                            <div class="col">
+                                0.72
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
                                 Precision:
                             </div>
                             <div class="col">
-                                0%
+                                0.72
                             </div>
                         </div>
                         <div class="row">
@@ -303,7 +311,7 @@ $res = file_get_contents($url);
                                 Recall:
                             </div>
                             <div class="col">
-                                0%
+                                0.71
                             </div>
                         </div>
                         <div class="row">
@@ -311,7 +319,7 @@ $res = file_get_contents($url);
                                 F1 Score:
                             </div>
                             <div class="col">
-                                0%
+                                0.71
                             </div>
                         </div>
                     </div>

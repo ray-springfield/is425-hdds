@@ -13083,7 +13083,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Imports</span>
@@ -13122,7 +13122,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Drop the first column, since it&#39;s just ID values</span>
@@ -13137,7 +13137,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Convert the dataset into a numpy array and scramble it</span>
@@ -13153,7 +13153,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the data into training, validation, test sets (80%, 10%, 10%)</span>
@@ -13169,7 +13169,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Function to create our feature and label sets (input 2D numpy array)</span>
@@ -13200,7 +13200,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Split the sets into features and labels</span>
@@ -13223,7 +13223,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a K-Neighbors Classifier</span>
@@ -13256,8 +13256,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6927142857142857
-Test score: 0.6831428571428572
+<pre>Validation score: 0.6845714285714286
+Test score: 0.682
 </pre>
 </div>
 </div>
@@ -13268,7 +13268,7 @@ Test score: 0.6831428571428572
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Logistic Regression Classifier</span>
@@ -13301,8 +13301,8 @@ Test score: 0.6831428571428572
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.703
-Test score: 0.6952857142857143
+<pre>Validation score: 0.694
+Test score: 0.6975714285714286
 </pre>
 </div>
 </div>
@@ -13313,7 +13313,7 @@ Test score: 0.6952857142857143
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Gaussian Naive Bayes Classifier</span>
@@ -13345,8 +13345,8 @@ Test score: 0.6952857142857143
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.5808571428571428
-Test score: 0.5905714285714285
+<pre>Validation score: 0.5897142857142857
+Test score: 0.5787142857142857
 </pre>
 </div>
 </div>
@@ -13357,7 +13357,7 @@ Test score: 0.5905714285714285
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Random Forest Classifier</span>
@@ -13389,8 +13389,8 @@ Test score: 0.5905714285714285
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7162857142857143
-Test score: 0.7142857142857143
+<pre>Validation score: 0.712
+Test score: 0.7192857142857143
 </pre>
 </div>
 </div>
@@ -13401,10 +13401,10 @@ Test score: 0.7142857142857143
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Random Forest Classifier</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Support Vector Classifer</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">SVC</span><span class="p">()</span>
 
 <span class="c1"># Fit the model</span>
@@ -13433,8 +13433,8 @@ Test score: 0.7142857142857143
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6012857142857143
-Test score: 0.6064285714285714
+<pre>Validation score: 0.6075714285714285
+Test score: 0.6145714285714285
 </pre>
 </div>
 </div>
@@ -13445,10 +13445,10 @@ Test score: 0.6064285714285714
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Random Forest Classifier</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Decision Tree Classifier</span>
 <span class="n">model</span> <span class="o">=</span> <span class="n">DecisionTreeClassifier</span><span class="p">()</span>
 
 <span class="c1"># Fit the model</span>
@@ -13477,8 +13477,8 @@ Test score: 0.6064285714285714
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6387142857142857
-Test score: 0.6385714285714286
+<pre>Validation score: 0.6297142857142857
+Test score: 0.6297142857142857
 </pre>
 </div>
 </div>
@@ -13496,7 +13496,7 @@ Test score: 0.6385714285714286
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Random Forest Classifier</span>
@@ -13528,8 +13528,8 @@ Test score: 0.6385714285714286
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7128571428571429
-Test score: 0.7127142857142857
+<pre>Validation score: 0.7062857142857143
+Test score: 0.7137142857142857
 </pre>
 </div>
 </div>
@@ -13540,7 +13540,7 @@ Test score: 0.7127142857142857
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a Random Forest Classifier</span>
@@ -13572,8 +13572,8 @@ Test score: 0.7127142857142857
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7171428571428572
-Test score: 0.716
+<pre>Validation score: 0.7104285714285714
+Test score: 0.7174285714285714
 </pre>
 </div>
 </div>
@@ -13593,7 +13593,7 @@ Test score: 0.716
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Pickle is used to serialize objects</span>
@@ -13610,7 +13610,21 @@ Test score: 0.716
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pickle</span>
+<span class="n">filename</span> <span class="o">=</span> <span class="s2">&quot;random-forest-heart-disease-model.sav&quot;</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># We can now try opening the model from the file and running it</span>
@@ -13634,8 +13648,79 @@ Test score: 0.716
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7171428571428572
-Test score: 0.716
+<pre>Validation score: 0.7104285714285714
+Test score: 0.7174285714285714
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Getting-Statistics">Getting Statistics<a class="anchor-link" href="#Getting-Statistics">&#182;</a></h1><p>We want to calculate precision, recall, and F1 score</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Get the array of predicted values from the saved model</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">saved_model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_features</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Generate a classification report</span>
+<span class="c1"># ********************************</span>
+
+<span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="kn">import</span> <span class="n">classification_report</span>
+
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">test_labels</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">predictions</span>
+
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>              precision    recall  f1-score   support
+
+       False       0.71      0.73      0.72      3490
+        True       0.72      0.71      0.71      3510
+
+    accuracy                           0.72      7000
+   macro avg       0.72      0.72      0.72      7000
+weighted avg       0.72      0.72      0.72      7000
+
 </pre>
 </div>
 </div>
