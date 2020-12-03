@@ -138,7 +138,8 @@ $res = file_get_contents($url);
             </div>
             <!-- to match the size of the other 268px icons -->
             <div class="col-5 d-flex justify-content-center align-items-center" style="height: 268px;">
-                <div class="shadow p-5 mb-5 bg-white rounded zoom-on-hover">
+                <div class="shadow p-5 mb-5 bg-white rounded zoom-on-hover" data-toggle="modal"
+                    data-target="#randomForestModal">
                     <?php echo '<h1 class="display-1">' . (float)$res * 100 . '%' . '</h1>'; ?>
                 </div>
             </div>
@@ -276,6 +277,52 @@ $res = file_get_contents($url);
             </div>
         </div>
     </div>
+
+    <!-- Random Forest Model Information Modal -->
+    <div class="modal fade" id="randomForestModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Model Statistics</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                Precision:
+                            </div>
+                            <div class="col">
+                                0%
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                Recall:
+                            </div>
+                            <div class="col">
+                                0%
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                F1 Score:
+                            </div>
+                            <div class="col">
+                                0%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 
 </html>
