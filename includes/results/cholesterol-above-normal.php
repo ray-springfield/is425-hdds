@@ -1,6 +1,7 @@
-<div>
+<div class="w-100">
     <div class="alert alert-warning" role="alert">
         <h2>Cholesterol: Above Normal</h2>
     </div>
-    <p>The patient's cholesterol falls within a healthy range; there is no need to make any changes.</p>
+    <p>While not severe, the patient has a higher-than-normal level of cholesterol. This can lead to the buildup of
+        fatty substances in the arteries.</p>
 </div>

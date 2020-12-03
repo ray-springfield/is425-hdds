@@ -69,34 +69,51 @@ $res = file_get_contents($url);
                             </div>
                             <div class="col-7 shadow-sm pt-3 mb-5 bg-white rounded">
                                 <?php
+                                // Simple boolean for determining if any alerts were rendered
+                                $alertsRendered = false;
+
                                 if ($bmi >= $BMI_OVERWEIGHT) {
                                     include 'includes/alerts/overweight-warning.php';
+                                    $alertsRendered = true;
                                 }
                                 // for elevated blood pressure, it's AND; for high, it's OR
                                 if ($systolicBloodPressure > $SYSTOLIC_NORMAL && $systolicBloodPressure <= $SYSTOLIC_ELEVATED &&
                                     $diastolicBloodPressure <= $DIASTOLIC_ELEVATED) {
                                     include 'includes/alerts/blood-pressure-warning.php';
+                                    $alertsRendered = true;
                                 } elseif ($systolicBloodPressure >= $SYSTOLIC_HIGH && $diastolicBloodPressure >= $DIASTOLIC_HIGH) {
                                     include 'includes/alerts/blood-pressure-danger.php';
+                                    $alertsRendered = true;
                                 }
                                 if ($cholesterol == 3) {
                                     include 'includes/alerts/cholesterol-danger.php';
+                                    $alertsRendered = true;
                                 } elseif ($cholesterol == 2) {
                                     include 'includes/alerts/cholesterol-warning.php';
+                                    $alertsRendered = true;
                                 }
                                 if ($glucose == 3) {
                                     include 'includes/alerts/glucose-danger.php';
+                                    $alertsRendered = true;
                                 } elseif ($glucose == 2) {
                                     include 'includes/alerts/glucose-warning.php';
+                                    $alertsRendered = true;
                                 }
                                 if ($smoking == 1) {
                                     include 'includes/alerts/smoking-warning.php';
+                                    $alertsRendered = true;
                                 }
                                 if ($alcohol == 1) {
                                     include 'includes/alerts/alcohol-warning.php';
+                                    $alertsRendered = true;
                                 }
                                 if ($physical == 0) {
                                     include 'includes/alerts/physical-warning.php';
+                                    $alertsRendered = true;
+                                }
+                                // If no alerts were rendered, rendere a success alert
+                                if ($alertsRendered === false) {
+                                    include 'includes/alerts/healthy-success.php';
                                 }
                                 ?>
                             </div>
@@ -111,23 +128,23 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <div>
                     <div class="alert alert-info" role="alert">
                         <h2>Model Prediction</h2>
                     </div>
-                    <p>The probability of heart disease in the patient, predicted using our Random Forest model</p>
+                    <p>The probability of heart disease in the patient, predicted using our Random Forest model.</p>
                 </div>
             </div>
             <!-- to match the size of the other 268px icons -->
-            <div class="col-7 d-flex justify-content-center align-items-center" style="height: 268px;">
+            <div class="col-5 d-flex justify-content-center align-items-center" style="height: 268px;">
                 <div class="shadow p-5 mb-5 bg-white rounded zoom-on-hover">
                     <?php echo '<h1 class="display-1">' . (float)$res * 100 . '%' . '</h1>'; ?>
                 </div>
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($bmi < $BMI_OVERWEIGHT) {
                     include 'includes/results/bmi-healthy.php';
@@ -136,7 +153,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.cdc.gov/healthyweight/assessing/bmi/index.html" target="_blank"
                     class="zoom-on-hover">
                     <img src="images/bmi-image.png" alt="BMI Image">
@@ -144,7 +161,7 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 // for elevated blood pressure, it's AND; for high, it's OR
                 if ($systolicBloodPressure > $SYSTOLIC_NORMAL && $systolicBloodPressure <= $SYSTOLIC_ELEVATED &&
@@ -157,7 +174,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.heart.org/en/health-topics/high-blood-pressure/understanding-blood-pressure-readings"
                     target="_blank" class="zoom-on-hover">
                     <img src="images/blood-pressure-image.png" alt="Blood Pressure Image">
@@ -165,7 +182,7 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($cholesterol == 3) {
                     include 'includes/results/cholesterol-well-above-normal.php';
@@ -176,7 +193,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://medlineplus.gov/cholesterol.html#:~:text=Cholesterol%20is%20a%20waxy%2C%20fat,all%20the%20cholesterol%20it%20needs."
                     target="_blank" class="zoom-on-hover">
                     <img src="images/cholesterol-image.png" alt="Cholesterol Image">
@@ -184,7 +201,7 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($glucose == 3) {
                     include 'includes/results/glucose-well-above-normal.php';
@@ -195,14 +212,14 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.healthline.com/health/glucose#normal-levels" target="_blank" class="zoom-on-hover">
                     <img src="images/glucose-image.png" alt="Glucose Image">
                 </a>
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($smoking == 1) {
                     include 'includes/results/smoking-yes.php';
@@ -211,7 +228,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.nhlbi.nih.gov/health-topics/smoking-and-your-heart" target="_blank"
                     class="zoom-on-hover">
                     <img src="images/smoking-image.png" alt="Smoking Image">
@@ -219,7 +236,7 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row mb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($alcohol == 1) {
                     include 'includes/results/alcohol-yes.php';
@@ -228,7 +245,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.webmd.com/heart-disease/guide/heart-disease-alcohol-your-heart" target="_blank"
                     class="zoom-on-hover">
                     <img src="images/alcohol-image.png" alt="Alcohol Image">
@@ -236,7 +253,7 @@ $res = file_get_contents($url);
             </div>
         </div>
         <div class="row pb-5">
-            <div class="col-5 d-flex align-items-center">
+            <div class="col-7 d-flex align-items-center">
                 <?php
                 if ($physical == 0) {
                     include 'includes/results/exercise-no.php';
@@ -245,7 +262,7 @@ $res = file_get_contents($url);
                 }
                 ?>
             </div>
-            <div class="col-7 d-flex justify-content-center">
+            <div class="col-5 d-flex justify-content-center">
                 <a href="https://www.ahajournals.org/doi/full/10.1161/01.CIR.0000048890.59383.8D" target="_blank"
                     class="zoom-on-hover">
                     <img src="images/exercise-image.png" alt="Exercise Image">
