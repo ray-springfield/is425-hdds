@@ -11,7 +11,7 @@
     <!-- Other Imports -->
     <link rel="stylesheet" href="stylesheets/styles.css">
 
-    <title>Home Page</title>
+    <title>Dashboard</title>
 </head>
 
 <body class="fade-in">

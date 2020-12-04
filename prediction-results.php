@@ -47,7 +47,7 @@ $res = file_get_contents($url);
     <link rel="icon" href="favicon.ico">
     <?php include 'includes/bootstrap-scripts.php';?>
     <link rel="stylesheet" href="stylesheets/styles.css">
-    <title>Submit Prediction Form</title>
+    <title>Results</title>
 </head>
 
 <body style="background-color: #483D8B;" class="fade-in">
