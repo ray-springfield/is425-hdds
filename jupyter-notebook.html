@@ -13256,8 +13256,8 @@ div#notebook {
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6845714285714286
-Test score: 0.682
+<pre>Validation score: 0.6794285714285714
+Test score: 0.6744285714285714
 </pre>
 </div>
 </div>
@@ -13301,8 +13301,8 @@ Test score: 0.682
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.694
-Test score: 0.6975714285714286
+<pre>Validation score: 0.6982857142857143
+Test score: 0.6834285714285714
 </pre>
 </div>
 </div>
@@ -13345,8 +13345,8 @@ Test score: 0.6975714285714286
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.5897142857142857
-Test score: 0.5787142857142857
+<pre>Validation score: 0.5888571428571429
+Test score: 0.5875714285714285
 </pre>
 </div>
 </div>
@@ -13389,8 +13389,8 @@ Test score: 0.5787142857142857
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.712
-Test score: 0.7192857142857143
+<pre>Validation score: 0.7112857142857143
+Test score: 0.7055714285714285
 </pre>
 </div>
 </div>
@@ -13433,8 +13433,8 @@ Test score: 0.7192857142857143
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6075714285714285
-Test score: 0.6145714285714285
+<pre>Validation score: 0.6008571428571429
+Test score: 0.6032857142857143
 </pre>
 </div>
 </div>
@@ -13477,8 +13477,8 @@ Test score: 0.6145714285714285
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.6297142857142857
-Test score: 0.6297142857142857
+<pre>Validation score: 0.6221428571428571
+Test score: 0.6334285714285715
 </pre>
 </div>
 </div>
@@ -13528,8 +13528,8 @@ Test score: 0.6297142857142857
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7062857142857143
-Test score: 0.7137142857142857
+<pre>Validation score: 0.7112857142857143
+Test score: 0.7024285714285714
 </pre>
 </div>
 </div>
@@ -13572,8 +13572,8 @@ Test score: 0.7137142857142857
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7104285714285714
-Test score: 0.7174285714285714
+<pre>Validation score: 0.7138571428571429
+Test score: 0.7058571428571428
 </pre>
 </div>
 </div>
@@ -13648,8 +13648,8 @@ Test score: 0.7174285714285714
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Validation score: 0.7104285714285714
-Test score: 0.7174285714285714
+<pre>Validation score: 0.7138571428571429
+Test score: 0.7058571428571428
 </pre>
 </div>
 </div>
@@ -13695,7 +13695,7 @@ Test score: 0.7174285714285714
 
 <span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">]</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -13714,13 +13714,100 @@ Test score: 0.7174285714285714
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>              precision    recall  f1-score   support
 
-       False       0.71      0.73      0.72      3490
-        True       0.72      0.71      0.71      3510
+       False    0.69752   0.71585   0.70657      3463
+        True    0.71445   0.69607   0.70514      3537
 
-    accuracy                           0.72      7000
-   macro avg       0.72      0.72      0.72      7000
-weighted avg       0.72      0.72      0.72      7000
+    accuracy                        0.70586      7000
+   macro avg    0.70599   0.70596   0.70586      7000
+weighted avg    0.70608   0.70586   0.70585      7000
 
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Comparing-it-to-the-Baseline-Model">Comparing it to the Baseline Model<a class="anchor-link" href="#Comparing-it-to-the-Baseline-Model">&#182;</a></h1><p>We can actually create and fit a DummyClassifier from scikit-learn to use as a baseline model.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.dummy</span> <span class="kn">import</span> <span class="n">DummyClassifier</span>
+
+<span class="n">dummy</span> <span class="o">=</span> <span class="n">DummyClassifier</span><span class="p">()</span>
+
+<span class="c1"># Fit the model</span>
+<span class="n">dummy</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">train_features</span><span class="p">,</span> <span class="n">train_labels</span><span class="p">)</span>
+
+<span class="c1"># Score the model on validation and test sets</span>
+<span class="n">valid_score</span> <span class="o">=</span> <span class="n">dummy</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">valid_features</span><span class="p">,</span> <span class="n">valid_labels</span><span class="p">)</span>
+<span class="n">test_score</span> <span class="o">=</span> <span class="n">dummy</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">test_features</span><span class="p">,</span> <span class="n">test_labels</span><span class="p">)</span>
+
+<span class="c1"># Print out the score results</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Validation score:&quot;</span><span class="p">,</span> <span class="n">valid_score</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Test score:&quot;</span><span class="p">,</span> <span class="n">test_score</span><span class="p">)</span>
+
+<span class="c1"># Get the array of predicted values from the dummy model</span>
+<span class="n">predictions</span> <span class="o">=</span> <span class="n">dummy</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">test_features</span><span class="p">)</span>
+
+<span class="c1"># Generate a classification report</span>
+<span class="c1"># ********************************</span>
+
+<span class="n">y_true</span> <span class="o">=</span> <span class="n">test_labels</span>
+<span class="n">y_pred</span> <span class="o">=</span> <span class="n">predictions</span>
+
+<span class="n">target_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;False&#39;</span><span class="p">,</span> <span class="s1">&#39;True&#39;</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y_true</span><span class="p">,</span> <span class="n">y_pred</span><span class="p">,</span> <span class="n">target_names</span><span class="o">=</span><span class="n">target_names</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">5</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Validation score: 0.5138571428571429
+Test score: 0.5135714285714286
+              precision    recall  f1-score   support
+
+       False    0.49040   0.49437   0.49238      3463
+        True    0.50100   0.49703   0.49901      3537
+
+    accuracy                        0.49571      7000
+   macro avg    0.49570   0.49570   0.49569      7000
+weighted avg    0.49576   0.49571   0.49573      7000
+
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>C:\Users\Alexander\anaconda3\lib\site-packages\sklearn\dummy.py:131: FutureWarning: The default value of strategy will change from stratified to prior in 0.24.
+  warnings.warn(&#34;The default value of strategy will change from &#34;
 </pre>
 </div>
 </div>

@@ -295,7 +295,7 @@ $res = file_get_contents($url);
                                 Accuracy:
                             </div>
                             <div class="col">
-                                0.72
+                                0.70586
                             </div>
                         </div>
                         <div class="row">
@@ -303,7 +303,7 @@ $res = file_get_contents($url);
                                 Precision:
                             </div>
                             <div class="col">
-                                0.72
+                                0.71445
                             </div>
                         </div>
                         <div class="row">
@@ -311,7 +311,7 @@ $res = file_get_contents($url);
                                 Recall:
                             </div>
                             <div class="col">
-                                0.71
+                                0.69607
                             </div>
                         </div>
                         <div class="row">
@@ -319,7 +319,7 @@ $res = file_get_contents($url);
                                 F1 Score:
                             </div>
                             <div class="col">
-                                0.71
+                                0.70514
                             </div>
                         </div>
                     </div>
