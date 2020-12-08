@@ -8,4 +8,4 @@ Link (Hosted on Google Cloud, Debian Instance):
 http://34.122.94.177/is425-hdds/
 
 ACTUAL WEBSITE NOW:
-http://rayspringfield.pw/is425-hdds/
+http://rayblaze.us/is425-hdds/
